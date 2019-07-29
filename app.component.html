@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ </div>
+ <!---Interpolation DataBinding-->
+ <h3>
+Firstname:{{fname}}<br>
+Lastname:{{lname}}<br>
+Fullname:{{getFullName()}}<br>
+sum:{{55+45+43}}
+</h3>
+<button disabled={{status}}>click</button>
+ <h3 style="color:brown"> Property Binding<br></h3>
+ <h3 [innerText]="fname"></h3>
+ <h3 [innerText]="lname"></h3>
+ <h3 [innerText]="getFullName()"></h3>
+ <button [disabled]="status">click</button>
+ <h3>Event binding</h3>
+ <button (click)="getcount()">count</button> 
+ <h3>{{count}}times button clicked</h3>
+<h3>Two way DataBinding</h3>
+<input type="text"[(ngModel)]="address"><br>
+Entered address is: {{address}}
+<router-outlet></router-outlet>
